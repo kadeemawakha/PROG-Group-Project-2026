@@ -33,26 +33,72 @@ int main()
 
 		if (choice == 1)
 		{
-			int id;
-			char name[50];
-
-			printf("Enter Student ID: ");
-			scanf_s("%d", &id);
-
-			printf("Enter Student Name: ");
-			scanf_s("%d", &name);
-
-			head = addStudent(head, id, name);
-			printf("Student added successfully.\n");
+			
+			head = addStudent(head);
+			
 		}
 
 		else if (choice == 2)
 		{
+			head = removeStudent(head);
+		}
+
+		else if (choice == 3) {
 			int id;
-			printf("Enter student ID to remove: ");
+			printf("Enter ID: ");
 			scanf_s("%d", &id);
 
-			head = removeStudent(head, id);
+			Student* s = searchById(head, id);
+			if (s)
+				displayStudent(s);
+			else
+				printf("Student not found.\n");
+		}
+
+		else if (choice == 4)
+		{
+			char name[50];
+			printf("Enter name: ");
+			scanf_s("%[^\n]", name);
+
+			Student* s = searchByName(head, name);
+
+			if (s)
+				displayStudent(s);
+			else
+				printf("Student not found.\n");
+		}
+
+		else if (choice == 5)
+		{
+			addGrade(head);
+		}
+
+		else if (choice == 6)
+		{
+			if (head == NULL)
+
+				printf("No students available.\n");
+
+			else
+				displayAll(head);
+		}
+
+		else if (choice == 7)
+		{
+			head = updateStudent(head);
+		}
+
+		else if (choice == 8)
+		{
+			freeList(head);
+			printf("Exiting. . . \n");
+			break;
+		}
+
+		else
+		{
+			printf("Invalid choice.\n");
 		}
 	}
 
