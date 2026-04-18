@@ -10,7 +10,7 @@ Student* addStudent(Student* head) {
     scanf("%d", &newNode->id);
 
     printf("Enter name: ");
-    scanf_s(" %[^\n]", newNode->name);
+    scanf_s(" %[^\n]", newNode->name, (unsigned)_countof(newNode->name));
 
     newNode->gradeCount = 0;
     newNode->average = 0;

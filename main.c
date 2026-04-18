@@ -9,9 +9,12 @@ void menu()
 	printf("1. Add Student\n");
 	printf("2. Remove Student\n");
 	printf("3. Search Student by ID\n");
-	printf("4. Add Grade to Student\n");
-	printf("5. Display All Students\n");
-	printf("6. Exit\n");
+	printf("4. Search by Name\n");
+	printf("5. Add Grade to Student\n");
+	printf("6. Display All Students\n");
+	printf("7. Update Student\n");
+
+	printf("8. Exit\n");
 	printf("Enter your choice: ");
 }
 
@@ -43,12 +46,13 @@ int main()
 			head = removeStudent(head);
 		}
 
-		else if (choice == 3) {
+		else if (choice == 3) 
+		{
 			int id;
 			printf("Enter ID: ");
 			scanf_s("%d", &id);
 
-			Student* s = searchById(head, id);
+			Student* s = searchByID(head, id);
 			if (s)
 				displayStudent(s);
 			else
