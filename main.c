@@ -55,4 +55,6 @@ int main()
 			head = removeStudent(head, id);
 		}
 	}
+
+	return 0;
 }

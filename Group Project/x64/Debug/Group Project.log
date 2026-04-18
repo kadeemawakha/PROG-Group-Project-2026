@@ -1,0 +1,15 @@
+﻿  main.c
+C:\Users\Kade\source\repos\PROG-Group-Project-2026\main.c(41,12): warning C4477: 'scanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'char (*)[50]'
+      C:\Users\Kade\source\repos\PROG-Group-Project-2026\main.c(41,12):
+      consider using '%hhd' in the format string
+  
+C:\Users\Kade\source\repos\PROG-Group-Project-2026\main.c(43,11): warning C4013: 'addStudent' undefined; assuming extern returning int
+C:\Users\Kade\source\repos\PROG-Group-Project-2026\main.c(43,9): warning C4047: '=': 'Student *' differs in levels of indirection from 'int'
+C:\Users\Kade\source\repos\PROG-Group-Project-2026\main.c(53,11): warning C4013: 'removeStudent' undefined; assuming extern returning int
+C:\Users\Kade\source\repos\PROG-Group-Project-2026\main.c(53,9): warning C4047: '=': 'Student *' differs in levels of indirection from 'int'
+  student.c
+  Generating Code...
+main.obj : error LNK2019: unresolved external symbol addStudent referenced in function main
+main.obj : error LNK2019: unresolved external symbol removeStudent referenced in function main
+MSVCRTD.lib(exe_winmain.obj) : error LNK2019: unresolved external symbol WinMain referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\x64\Debug\Group Project.exe : fatal error LNK1120: 3 unresolved externals
