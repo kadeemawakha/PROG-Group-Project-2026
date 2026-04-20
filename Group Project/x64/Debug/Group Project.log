@@ -1,4 +1,6 @@
 ﻿  main.c
+  operations.c
+  student.c
 C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\main.c(66,12): warning C4473: 'scanf_s' : not enough arguments passed for format string
       C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\main.c(66,12):
       placeholders and their parameters expect 2 variadic arguments, but 1 were provided
@@ -7,4 +9,9 @@ C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\main.c(66,12): warning C4473:
       C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\main.c(66,12):
       this argument is used as a buffer size
   
+C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\operations.c(27,8): warning C4013: 'strcmp' undefined; assuming extern returning int
+C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\student.c(10,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
+C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\operations.c(19,1): warning C4715: 'searchByID': not all control paths return a value
+C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\operations.c(35,1): warning C4715: 'searchByName': not all control paths return a value
   Group Project.vcxproj -> C:\Users\Kade\Source\Repos\PROG-Group-Project-2026\x64\Debug\Group Project.exe

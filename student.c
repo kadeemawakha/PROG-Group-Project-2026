@@ -53,24 +53,6 @@ Student* removeStudent(Student* head) {
     return head;
 }
 
-Student* searchByID(Student* head, int id) {
-    while (head != NULL) {
-        if (head->id == id)
-            return head;
-        head = head->next;
-    }
-    return NULL;
-}
-
-Student* searchByName(Student* head, char name[]) {
-    while (head != NULL) {
-        if (strcmp(head->name, name) == 0)
-            return head;
-        head = head->next;
-    }
-    return NULL;
-}
-
 void addGrade(Student* head) {
     int id;
     printf("Enter student ID: ");
@@ -93,44 +75,6 @@ void addGrade(Student* head) {
         sum += s->grades[i];
 
     s->average = sum / s->gradeCount;
-}
-
-void displayStudent(Student* s) {
-    if (!s) return;
-
-    printf("\nID: %d\nName: %s\nAverage: %.2f\n",
-        s->id, s->name, s->average);
-
-    printf("Grades: ");
-    for (int i = 0; i < s->gradeCount; i++)
-        printf("%.1f ", s->grades[i]);
-
-    printf("\n");
-}
-
-void displayAll(Student* head) {
-    while (head != NULL) {
-        displayStudent(head);
-        head = head->next;
-    }
-}
-
-Student* updateStudent(Student* head) {
-    int id;
-    printf("Enter ID to update: ");
-    scanf_s("%d", &id);
-
-    Student* s = searchByID(head, id);
-
-    if (!s) {
-        printf("Student not found.\n");
-        return head;
-    }
-
-    printf("Enter new name: ");
-    scanf_s(" %[^\n]", s->name, (unsigned)_countof(s->name));
-
-    return head;
 }
 
 void freeList(Student* head) {
